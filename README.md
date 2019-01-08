@@ -232,7 +232,7 @@ ActiveAdmin.register Post do
 end
 ```
 
-嵌入程式碼 code snippet
+## 嵌入程式碼 code snippet
 ```
 // app/assets/javascripts/ckeditor/config.js
 
