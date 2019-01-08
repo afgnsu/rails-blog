@@ -256,18 +256,11 @@ app/assets/javascripts/ckeditor/plugins
 接著你需要安裝 Highlight.js，到這個網址下載後解壓縮，把highlight.pack.js檔案放置到app/assets/javascripts
 挑選一個喜歡的style.css檔案，複製到app/assets/stylesheets，可以在這裡預覽效果
 
-在檔案application.html.erb 的最底端加入hljs.initHighlightingOnLoad()來生成效果，但我的網頁在render的時候有點問題，會導致每次都要手動按重新整理才會出現code snippet的樣式，後來改成以下方案。
+在javascript加入hljs.initHighlightingOnLoad()來生成效果，但我的網頁在render的時候有點問題，會導致每次都要手動按重新整理才會出現code snippet的樣式，後來改成以下方案。
 ```
-# In application.html.erb file
-
-    // ...
-    
-# 在檔案的最底端加入
-<script>
-    // hljs.initHighlightingOnLoad(); //可以先試試只加這行
-    hljs.initHighlighting.called = false;
-    hljs.initHighlighting();
-<script>
+// hljs.initHighlightingOnLoad(); //可以先試試只加這行
+hljs.initHighlighting.called = false;
+hljs.initHighlighting();
 ```
 
 ## Troubleshooting
