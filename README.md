@@ -1,3 +1,12 @@
+這是一個具有基本功能部落格的建置：
+
+1. 搭建後台(gem activeadmin)
+2. 使用產生Post CRUD (文章 創建/讀取/更新/刪除)(rails generate scaffold)
+3. 文章貼照片(gem carrierwave )
+4. 加裝WYSIWYG文字編輯器(gem ckeditor)
+5. 可加tag (使用gem acts_as_taggable-on，類似概念也可應用在增加類別)
+6. 可嵌入程式碼(ckeditor code snippet plugin / highlight.js)
+
 ## 創建專案
 使用postgresql做數據庫，另外我使用webpack。
 ```
@@ -261,9 +270,10 @@ app/assets/javascripts/ckeditor/plugins
 <script>
 ```
 
-Troubleshooting
+## Troubleshooting
 此外，我有遇到以下問題，如果同樣需要的人，請參考：
-CKEditor 4: Uncaught TypeError: Cannot read property 'langEntries' of null:
+* CKEditor 4: Uncaught TypeError: Cannot read property 'langEntries' of null:
 https://medium.com/r/?url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F24500525%2Fckeditor-4-uncaught-typeerror-cannot-read-property-langentries-of-null
-ActiveAdmin styles are applied on non-ActiveAdmin pages:
+
+* ActiveAdmin styles are applied on non-ActiveAdmin pages:
 https://medium.com/r/?url=https%3A%2F%2Fgithub.com%2Factiveadmin%2Factiveadmin%2Fissues%2F3819
