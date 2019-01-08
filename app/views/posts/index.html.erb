@@ -1,0 +1,9 @@
+<% @posts.each do |post|%>
+  <%= link_to post.title, post %>
+  <% post.tag_list.each do |tag| %>
+    tag
+  <% end %>
+<% end %>
+
+
+
